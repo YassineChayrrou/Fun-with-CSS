@@ -1,5 +1,90 @@
 body {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* colors : light unchecked #ebebeb
+            text No color : #c3c3c3
+            border color of unchecked : #c4c4c4
+            checked : y
+        
+            */
+.toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* input[type="checkbox"] {
+    height: 100px;
+    width: 180px;
+    appearance: none;
+    background: #f3f3f3;
+    border-radius: 80px;
+} */
+
+.toggle-cb {
+    height: 100px;
+    width: 220px;
+    appearance: none;
+    border-radius: 80px;
+    border: solid 3px #c4c4c4;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/* input checked section */
+
+.toggle-cb:checked {
+    background: #e1013c;
+    position: relative;
+}
+
+.toggle-cb:checked::after {
+    position: absolute;
+    content: 'Yes';
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -1px; 
+    top: 25%;
+    left: 20%;
+}
+
+.toggle-cb::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: #ebebeb;
+    border-radius: 100%;
+    border: solid 3px #c4c4c4;
+    top: -6px;
+    right: -20%;
+    transition: 0.5s ease;
+}
+
+/* input not checked section */
+
+.toggle-cb:not(:checked) {
+   background: #ebebeb;
+   position: relative;
+}
+
+
+.toggle-cb:not(:checked)::after {
+    content: 'No';
+    position: absolute;
+    font-size: 40px;
+    font-weight: 900;
+    color: #c3c3c3;
+    letter-spacing: -1px; 
+    top: 25%;
+    right: 20%;
+}
+
+
+.toggle-cb:not(:checked)::before {
+    left: -20%;
 }
