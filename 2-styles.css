@@ -3,12 +3,6 @@ body {
     padding: 0;
 }
 
-/* colors : light unchecked #ebebeb
-            text No color : #c3c3c3
-            border color of unchecked : #c4c4c4
-            checked : y
-        
-            */
 .toggle {
     position: absolute;
     top: 50%;
