@@ -10,6 +10,12 @@ body {
     flex-direction: column;
 }
 
+.menu-open {
+    outline: none;
+    appearance: none;
+}
+
+
 .menu-open-button {
     height: 75px;
     width: 75px;
@@ -34,23 +40,34 @@ body {
     margin: 2px;
 }
 
-
 .menu-open-button:hover .menu-line {
     width: 30px;
 }
+.menu-open:checked + .menu-open-button .menu-line {
+    margin: -2px;
+}
+.menu-open:checked + .menu-open-button .menu-line.menu-line-1 {
+    transform: rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .menu-line.menu-line-2 {
+    transform: rotate(-45deg);
+}
+.menu-open:checked + .menu-open-button .menu-line.menu-line-3 {
+    display: none;
+}
 /* hamburger menu elements */
 
-.menu-item {
+.menu-open ~ .menu-item {
     width: 75px;
     height: 75px;
     margin: 3px;
     border-radius: 100%;
     border: solid 1px #952b45;
     background: #952b45;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    transition: .2s ease;
+    transition: all 0.5s ease-in-out;
 }
 
 .menu-item:hover {
@@ -68,4 +85,10 @@ body {
 
 .menu-item:hover i {
     color: #952b45;
+}
+
+/* checkbox dynamic display */
+
+.menu-open:checked ~ .menu-item {
+    display: flex;
 }
