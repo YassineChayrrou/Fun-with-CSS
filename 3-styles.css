@@ -1,18 +1,71 @@
 body {
-    margin: 0;
-    padding: 0;
-}
-
-.menu {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .menu-open-button {
-    height: 80px;
-    width: 80px;
+    height: 75px;
+    width: 75px;
     border-radius: 100%;
     background: #952b45;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-open-button:hover {
+    height: 80px;
+    width: 80px;
+}
+
+.menu-open-button .menu-line {
+    width: 25px;
+    height: 4px; 
+    background: white;
+    margin: 2px;
+}
+
+
+.menu-open-button:hover .menu-line {
+    width: 30px;
+}
+/* hamburger menu elements */
+
+.menu-item {
+    width: 75px;
+    height: 75px;
+    margin: 3px;
+    border-radius: 100%;
+    border: solid 1px #952b45;
+    background: #952b45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease;
+}
+
+.menu-item:hover {
+    background: white;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu a i{
+    font-size: xx-large;
+    color: white;
+}
+
+.menu-item:hover i {
+    color: #952b45;
 }
